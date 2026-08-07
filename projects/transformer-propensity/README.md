@@ -6,7 +6,7 @@ In this project, we develop a propensity model to predict how likely a customer 
 - Obs date: every monday
 - Production output: One score per customer every monday morning
 - Label Window: 7 days after observation date
-- Feature Window: the prior T=8 weekly activity snapshots. Feature window ends at the obs date; label window starts after it
+- Feature Window: the prior T=8 weekly activity snapshots. Feature window ends at the obs date; label window starts after it.
 - Out of Time Split:  weeks 1-20 in-time, 28-30 OOT. 7-week gap mimicking deployment lag. OOT gets read once, at the end, never during tuning.
 - In Time Split: by customer_id ` hash(customer_id) % 100 < 15`
 
