@@ -1,0 +1,39 @@
+name,ipa,respelling,category,notes
+Smith,/smɪθ/,SMITH,control,Easy control case
+Emily,/ˈɛmɪli/,EM-ih-lee,control,Easy control; schwa in middle
+David,/ˈdeɪvɪd/,DAY-vid,control,Easy control
+Maria,/məˈriːə/,muh-REE-uh,control,Common; stress on 2nd syllable
+Jennifer,/ˈdʒɛnɪfər/,JEN-ih-fer,common-reduction,Unstressed vowels reduce to schwa
+Stephen,/ˈstiːvən/,STEE-vun,silent-letter,"ph=v; contrast Stephan; rare STEF-un exists"
+Sean,/ʃɔːn/,SHAWN,gaelic,Irish; se=sh
+Siobhan,/ʃɪˈvɔːn/,shiv-AWN,gaelic,"Irish; bh=v, silent-ish"
+Saoirse,/ˈsɜːrʃə/,SUR-shuh,gaelic,"Irish; SEER-shuh variant also common"
+Niamh,/niːv/,NEEV,gaelic,Irish; mh=v
+Caitlin,/ˈkeɪtlɪn/,KAYT-lin,gaelic-anglicized,"Anglicized; Irish orig closer to KOYT-leen"
+Nguyen,/ˈwɪn/,WIN,transliteration-variant,"Vietnamese; major variants NGWEN, NOO-yen"
+Xi,/ʃiː/,SHEE,transliteration,Mandarin pinyin x=sh
+Zhang,/dʒɑːŋ/,JAHNG,transliteration,Mandarin zh
+Qi,/tʃiː/,CHEE,transliteration,Mandarin q=ch
+Xochitl,/ˈsotʃitɬ/,SO-cheetl,non-latin-orthography,"Nahuatl; US-common approx SO-chee"
+Bjork,/bjɜːrk/,BYORK,non-latin-orthography,"Icelandic Bjork/Bjork; bj=by"
+Joaquin,/wɑːˈkiːn/,wah-KEEN,spanish,Spanish; j realized as w-glide here
+Guillermo,/ɡiˈjɛrmoʊ/,gee-YAIR-moh,spanish,Spanish; ll=y
+Xavier,/ˈzeɪviər/,ZAY-vee-er,spanish-anglicized,"Also eg-ZAY-vee-er; Spanish HAH-vee-er"
+Mary-Kate,/ˈmɛri ˈkeɪt/,MEHR-ee-KAYT,hyphenated,Two stressed parts
+J.R.,/ˌdʒeɪ ˈɑr/,JAY-AR,initials,Spell out letters
+Featherstonehaugh,/ˈfænʃɔː/,FAN-shaw,english-trap,Classic English surname trap
+Cholmondeley,/ˈtʃʌmli/,CHUM-lee,english-trap,English surname trap
+Worcester,/ˈwʊstər/,WUUS-ter,english-trap,Place-derived surname
+Favre,/fɑːrv/,FARV,metathesis,"r/v swap; per Brett Favre"
+Hermione,/hərˈmaɪəni/,her-MY-oh-nee,multisyllable,Four syllables
+Penelope,/pəˈnɛləpi/,puh-NEL-oh-pee,multisyllable,Not PEN-eh-lope
+Zoe,/ˈzoʊi/,ZOH-ee,diaeresis,"Zoe; two syllables, not ZOH"
+Anais,/ɑːnaˈiːs/,ah-nah-EES,diaeresis,"Anais; diaeresis splits vowels"
+Beyonce,/biˈjɒnseɪ/,bee-YON-say,accent-mark,Beyonce; accent marks stress
+Wojciech,/ˈvɔɪtʃɛx/,VOY-chekh,slavic,Polish; final ch is guttural
+Dvorak,/ˈdvɔːʒɑːk/,DVOR-zhahk,slavic,"Czech composer; keyboard often DVOR-ak"
+Priya,/ˈpriːjɑː/,PREE-yah,south-asian,Sanskrit origin
+Krishnamurthy,/ˌkrɪʃnəˈmɜrti/,krish-nuh-MUR-tee,south-asian,Long; stress placement tricky
+Muhammad,/moʊˈhɑːməd/,moh-HAH-mud,arabic-variant,"Many spellings/variants; also muh-HAM-ad"
+Fatima,/ˈfɑːtɪmə/,FAH-tih-muh,arabic-variant,"Stress varies: also fah-TEE-mah"
+X Æ A-12,/ˈɛks æʃ eɪ ˈtwɛlv/,EX-ash-ay-TWELV,policy-breaker,"Musk/Grimes son; NO canonical pron; Musk said 'X Ash A Twelve', Grimes said Ae='ai'; symbols+number defy G2P"
