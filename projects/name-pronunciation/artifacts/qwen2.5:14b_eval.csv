@@ -1,0 +1,39 @@
+,name,category,gold_ipa,pred_ipa,ipa_cer,confidence,gold_respell,pred_respell
+0,Smith,control,/smɪθ/,smɪθ,0.0,1.0,SMITH,SMITH
+1,Emily,control,/ˈɛmɪli/,[ˈɛməli],0.2,1.0,EM-ih-lee,EM-u-lee
+2,David,control,/ˈdeɪvɪd/,dəˈveɪd,0.5,1.0,DAY-vid,DUH-vayd
+3,Maria,control,/məˈriːə/,məˈri.ə,0.16666666666666666,1.0,muh-REE-uh,MUH-rree-uuh
+4,Jennifer,common-reduction,/ˈdʒɛnɪfər/,dʒɛnɪfər,0.0,1.0,JEN-ih-fer,JEN-uh-fur
+5,Stephen,silent-letter,/ˈstiːvən/,ˈsteɪθən,0.42857142857142855,1.0,STEE-vun,STAY-thuhn
+6,Sean,gaelic,/ʃɔːn/,siːn,0.5,1.0,SHAWN,SEE-uhn
+7,Siobhan,gaelic,/ʃɪˈvɔːn/,ʃaʊ.bən,0.6666666666666666,1.0,shiv-AWN,SHOW-buhn
+8,Saoirse,gaelic,/ˈsɜːrʃə/,ˈʃɔrʃə,0.5,0.95,SUR-shuh,SHOR-shuh
+9,Niamh,gaelic,/niːv/,niːf,0.25,1.0,NEEV,NEE-f
+10,Caitlin,gaelic-anglicized,/ˈkeɪtlɪn/,kɛt.lɪn,0.2857142857142857,1.0,KAYT-lin,KET-lin
+11,Nguyen,transliteration-variant,/ˈwɪn/,ˈwɪŋ.jən,1.0,1.0,WIN,WING-ee-un
+12,Xi,transliteration,/ʃiː/,ˈzɪ,1.0,0.95,SHEE,ZIH
+13,Zhang,transliteration,/dʒɑːŋ/,tʃæŋ,0.8,1.0,JAHNG,CHAHNG
+14,Qi,transliteration,/tʃiː/,tʃi,0.25,0.95,CHEE,CHEE
+15,Xochitl,non-latin-orthography,/ˈsotʃitɬ/,soˈtʃi(t)ɬ,0.2857142857142857,0.95,SO-cheetl,so-KHEET-l
+16,Bjork,non-latin-orthography,/bjɜːrk/,bjʊrk,0.3333333333333333,1.0,BYORK,BYORK
+17,Joaquin,spanish,/wɑːˈkiːn/,dʒwɑkɪn,0.7142857142857143,1.0,wah-KEEN,JWAH-kin
+18,Guillermo,spanish,/ɡiˈjɛrmoʊ/,[ɡiˈʝeɾmo],0.5,1.0,gee-YAIR-moh,GHEE-yehr-mo
+19,Xavier,spanish-anglicized,/ˈzeɪviər/,/zævɪər/,0.42857142857142855,1.0,ZAY-vee-er,ZAH-vyuh-er
+20,Mary-Kate,hyphenated,/ˈmɛri ˈkeɪt/,mɛrɪkeɪ,0.25,1.0,MEHR-ee-KAYT,MURR-ih-kay
+21,J.R.,initials,/ˌdʒeɪ ˈɑr/,dʒɑːr,0.5,1.0,JAY-AR,JAR
+22,Featherstonehaugh,english-trap,/ˈfænʃɔː/,ˈfɛðəstnɔː,1.0,0.95,FAN-shaw,FEH-thuhs-tnown
+23,Cholmondeley,english-trap,/ˈtʃʌmli/,/tʃɒm.dli/,0.3333333333333333,0.95,CHUM-lee,CHOHM-dlee
+24,Worcester,english-trap,/ˈwʊstər/,ˈwʊstər,0.0,1.0,WUUS-ter,WUH-stuhr
+25,Favre,metathesis,/fɑːrv/,fɑːvɹ,0.4,1.0,FARV,FAH-vuhr
+26,Hermione,multisyllable,/hərˈmaɪəni/,hɜːˈmɪənoʊ,0.5555555555555556,1.0,her-MY-oh-nee,UR-mee-uh-noh
+27,Penelope,multisyllable,/pəˈnɛləpi/,pəˈnɛləpi,0.0,1.0,puh-NEL-oh-pee,puh-NEL-uh-pee
+28,Zoe,diaeresis,/ˈzoʊi/,zoʊ,0.25,1.0,ZOH-ee,ZOE
+29,Anais,diaeresis,/ɑːnaˈiːs/,ɑˈneɪ.ɪs,0.5714285714285714,1.0,ah-nah-EES,AH-nay-ihss
+30,Beyonce,accent-mark,/biˈjɒnseɪ/,bəˈjɒns,0.375,1.0,bee-YON-say,buh-YONSS
+31,Wojciech,slavic,/ˈvɔɪtʃɛx/,ˈvɔj.t͡ɕɛx,0.2857142857142857,1.0,VOY-chekh,VOY-chekh
+32,Dvorak,slavic,/ˈdvɔːʒɑːk/,ˈdvɔræk,0.5,1.0,DVOR-zhahk,DOHR-vahk
+33,Priya,south-asian,/ˈpriːjɑː/,ˈpɹiə,0.7142857142857143,1.0,PREE-yah,PRY-uh
+34,Krishnamurthy,south-asian,/ˌkrɪʃnəˈmɜrti/,kriʃnəˈmurti,0.18181818181818182,0.95,krish-nuh-MUR-tee,KRIH-shnuh-MUR-tih
+35,Muhammad,arabic-variant,/moʊˈhɑːməd/,[məˈhæməd],0.4444444444444444,1.0,moh-HAH-mud,mu-HAM-ud
+36,Fatima,arabic-variant,/ˈfɑːtɪmə/,fəˈtiːmə,0.5714285714285714,1.0,FAH-tih-muh,FUH-tee-muhs
+37,X Æ A-12,policy-breaker,/ˈɛks æʃ eɪ ˈtwɛlv/,,,0.0,EX-ash-ay-TWELV,
