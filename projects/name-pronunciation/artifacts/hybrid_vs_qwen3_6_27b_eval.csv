@@ -1,0 +1,39 @@
+,name,category,gold_ipa,pred_ipa,ipa_cer,hybrid_pred_ipa,hybrid_ipa_cer,confidence,gold_respell,pred_respell,source
+0,Smith,control,/smɪθ/,/smɪθ/,0.0,/smɪθ/,0.0,1.0,SMITH,s-MIH-th,dict
+1,Emily,control,/ˈɛmɪli/,/ˈɛm.əl.i/,0.2,/ɛmɪli/,0.0,0.95,EM-ih-lee,EM-uh-lee,dict
+2,David,control,/ˈdeɪvɪd/,/ˈdeɪvɪd/,0.0,/deɪvɪd/,0.0,1.0,DAY-vid,DAY-vihd,dict
+3,Maria,control,/məˈriːə/,/məˈriːə/,0.0,/mɝiə/,0.5,0.95,muh-REE-uh,muh-REE-uh,dict
+4,Jennifer,common-reduction,/ˈdʒɛnɪfər/,/ˈdʒɛn.ə.fɚ/,0.375,/dʒɛnəfɝ/,0.375,0.95,JEN-ih-fer,JEN-uh-fer,dict
+5,Stephen,silent-letter,/ˈstiːvən/,/ˈstɛf.ən/,0.42857142857142855,/stivən/,0.14285714285714285,0.95,STEE-vun,STEF-uhn,dict
+6,Sean,gaelic,/ʃɔːn/,/siːn/,0.5,/ʃɔn/,0.25,0.95,SHAWN,seen,dict
+7,Siobhan,gaelic,/ʃɪˈvɔːn/,/ˈʃiːvən/,0.6666666666666666,/ʃaʊbɑn/,0.6666666666666666,0.95,shiv-AWN,SHEE-vun,dict
+8,Saoirse,gaelic,/ˈsɜːrʃə/,/ˈsɪrʃə/,0.3333333333333333,/ˈsɪrʃə/,0.3333333333333333,0.95,SUR-shuh,SEER-shuh,llm
+9,Niamh,gaelic,/niːv/,/niːv/,0.0,/naɪəm/,1.0,0.95,NEEV,NEEV,dict
+10,Caitlin,gaelic-anglicized,/ˈkeɪtlɪn/,/ˈkeɪtlɪn/,0.0,/keɪtlɪn/,0.0,0.95,KAYT-lin,KAY-tlin,dict
+11,Nguyen,transliteration-variant,/ˈwɪn/,/wɪn/,0.0,/nujɛn/,1.3333333333333333,0.95,WIN,WIN,dict
+12,Xi,transliteration,/ʃiː/,/ʃiː/,0.0,/ʃi/,0.3333333333333333,0.95,SHEE,SHEE,dict
+13,Zhang,transliteration,/dʒɑːŋ/,/dʒæŋ/,0.4,/ʒæŋ/,0.6,0.95,JAHNG,JAHNG,dict
+14,Qi,transliteration,/tʃiː/,/tʃiː/,0.0,/ki/,0.75,0.95,CHEE,CHEE,dict
+15,Xochitl,non-latin-orthography,/ˈsotʃitɬ/,/soʊˈtʃiːtl/,0.42857142857142855,/soʊˈtʃiːtl/,0.42857142857142855,0.85,SO-cheetl,SOH-cheetl,llm
+16,Bjork,non-latin-orthography,/bjɜːrk/,/ˈbjoʊrk/,0.3333333333333333,/bjɔrk/,0.3333333333333333,0.95,BYORK,BYORK,dict
+17,Joaquin,spanish,/wɑːˈkiːn/,/hoʊˈkiːn/,0.42857142857142855,/wɑkin/,0.2857142857142857,0.95,wah-KEEN,hoe-KEEN,dict
+18,Guillermo,spanish,/ɡiˈjɛrmoʊ/,/ɡwiˈɹi.moʊ/,0.5,/ɡwɪljɛrmoʊ/,0.375,0.95,gee-YAIR-moh,GWIL-ree-MOH,dict
+19,Xavier,spanish-anglicized,/ˈzeɪviər/,/zæˈvɪər/,0.42857142857142855,/zeɪvjɝ/,0.42857142857142855,0.95,ZAY-vee-er,zah-VYER,dict
+20,Mary-Kate,hyphenated,/ˈmɛri ˈkeɪt/,/ˈmɛɹi keɪt/,0.125,/ˈmɛɹi keɪt/,0.125,0.95,MEHR-ee-KAYT,MAR-ee KAYT,llm
+21,J.R.,initials,/ˌdʒeɪ ˈɑr/,/dʒeɪ ɑr/,0.0,/dʒeɪ ɑr/,0.0,0.95,JAY-AR,JAY ar,llm
+22,Featherstonehaugh,english-trap,/ˈfænʃɔː/,/ˈfɛðərstoʊn/,1.5,/ˈfɛðərstoʊn/,1.5,0.3,FAN-shaw,FEATH-er-stone,llm
+23,Cholmondeley,english-trap,/ˈtʃʌmli/,/ˈtʃʌmli/,0.0,/ˈtʃʌmli/,0.0,0.95,CHUM-lee,CHUM-lee,llm
+24,Worcester,english-trap,/ˈwʊstər/,/ˈwʊstər/,0.0,/wʊstɝ/,0.3333333333333333,0.95,WUUS-ter,WOOS-ter,dict
+25,Favre,metathesis,/fɑːrv/,/ˈfɑvər/,0.6,/feɪvɝ/,0.8,0.95,FARV,FAV-er,dict
+26,Hermione,multisyllable,/hərˈmaɪəni/,/hɜːrˈmoʊni/,0.5555555555555556,/hɝmioʊni/,0.5555555555555556,0.95,her-MY-oh-nee,hur-MOH-nee,dict
+27,Penelope,multisyllable,/pəˈnɛləpi/,/ˈpɛnəloʊpi/,0.5,/pənɛləpi/,0.0,0.95,puh-NEL-oh-pee,PEN-uh-loh-pee,dict
+28,Zoe,diaeresis,/ˈzoʊi/,/ˈzoʊ.i/,0.0,/zoʊi/,0.0,0.95,ZOH-ee,ZOH-ee,dict
+29,Anais,diaeresis,/ɑːnaˈiːs/,/əˈnaɪ/,0.7142857142857143,/əˈnaɪ/,0.7142857142857143,0.95,ah-nah-EES,uh-NYE,llm
+30,Beyonce,accent-mark,/biˈjɒnseɪ/,/beɪˈɑːn.seɪ/,0.5,/bɪjɔnseɪ/,0.25,0.95,bee-YON-say,bay-ON-say,dict
+31,Wojciech,slavic,/ˈvɔɪtʃɛx/,/ˈvɔɪ.tʃɛʃ/,0.14285714285714285,/wɔɪtʃɛk/,0.2857142857142857,0.95,VOY-chekh,VOY-chesh,dict
+32,Dvorak,slavic,/ˈdvɔːʒɑːk/,/ˈdvɔræk/,0.5,/dvɔrək/,0.5,0.95,DVOR-zhahk,DVOR-ahk,dict
+33,Priya,south-asian,/ˈpriːjɑː/,/ˈpriːjə/,0.2857142857142857,/ˈpriːjə/,0.2857142857142857,0.95,PREE-yah,PREE-yuh,llm
+34,Krishnamurthy,south-asian,/ˌkrɪʃnəˈmɜrti/,/krɪʃ.nəˈmɝ.θi/,0.2727272727272727,/krɪʃ.nəˈmɝ.θi/,0.2727272727272727,0.95,krish-nuh-MUR-tee,KRISH-nuh-MUR-thee,llm
+35,Muhammad,arabic-variant,/moʊˈhɑːməd/,/muːhəˈmɑːd/,0.6666666666666666,/mʊhɑməd/,0.2222222222222222,0.95,moh-HAH-mud,MOO-huh-MAD,dict
+36,Fatima,arabic-variant,/ˈfɑːtɪmə/,/fəˈtiːmə/,0.5714285714285714,/fæθɪmə/,0.42857142857142855,0.95,FAH-tih-muh,fuh-TEE-muh,dict
+37,X Æ A-12,policy-breaker,/ˈɛks æʃ eɪ ˈtwɛlv/,/ɛks æʃ eɪ twɛlv/,0.0,/ɛks æʃ eɪ twɛlv/,0.0,0.3,EX-ash-ay-TWELV,eks ash ay twelve,llm

@@ -8,5 +8,6 @@ dependencies = [
     "jiwer>=4.0.0",
     "openai>=2.53.0",
     "pandas>=3.0.5",
+    "pronouncing>=0.3.0",
     "pydantic>=2.13.4",
 ]

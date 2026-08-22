@@ -1,8 +1,7 @@
 # name-pronunciation
 
 ## Problem
-Support specialists in Salesforce look up how to say
-customer names. Goal = given a name, produce its pronunciation.
+Goal = given a name, produce its pronunciation.
 
 ## Scope / boundary
 What this IS: a function `pronounce(name) -> Pronunciation`.
@@ -19,13 +18,13 @@ class Pronunciation(BaseModel):
 ```
 
 ## Approach: Running locally (Ollama)
-LLM call via a local open-weight model (`qwen2.5:7b`) served by Ollama,
+LLM call via local open-weight models (`qwen2.5:7b`,`qwen2.5:14b`,`qwen3.6:27b`) served by Ollama,
 reached through its OpenAI-compatible API (`http://localhost:11434/v1`). Provider is therefore swappable:
 one `base_url` change points the same code at OpenAI/Anthropic instead.
 
 Chosen local because (1) free — no per-token billing, and (2) privacy:
 customer names never leave the machine for a third-party API, which matters
-for the real Salesforce use case (PII/compliance).
+for the real business use case (PII/compliance).
 
 ### One-time setup
     brew install ollama           # install (or download the app from ollama.com)
@@ -53,47 +52,47 @@ Gold set in data/gold.csv (38 names, hard cases included).
 Metrics: Character level CER for IPA; human accept/reject for respelling.
 
 ## Findings
+We compared 3 local models and find that IPA accuracy improves monotonically with size (CER 0.52 → 0.43 → 0.32), but the most accurate model's reasoning mode makes it operationally impractical for batch use — leaving the mid-size non-reasoning model as the best practical pick — while a naive dictionary+LLM hybrid *reduced* accuracy rather than improving it.
 
-Local open-weight LLMs can generate name → IPA, but neither tested model is
-production-grade. Best local result: qwen2.5:14b at ~0.42 segmental IPA CER.
+| Method                 | Overall IPA CER | Note                                         |
+|------------------------|-----------------|----------------------------------------------|
+| qwen2.5:7b             | 0.52            | weak                                         |
+| qwen2.5:14b            | 0.43            | fast, non-reasoning                          |
+| qwen3.6:27b            | 0.32            | best accuracy; reasoning mode impractical    |
+| CMUdict + 27b (hybrid) | 0.38            | dictionary HURT overall                      |
 
-**Capacity helps — broadly.** Moving 7b → 14b lowered overall CER 0.52 → 0.42,
-with dramatic gains where 7b was failing:
-- Jennifer (a top-100 name): 0.75 → 0.00 — 7b produced "jeh-FRIN"; 14b nailed it.
-- English surname traps (Cholmondeley, Featherstonehaugh): 0.83 → 0.44
-- Initials: 0.83 → 0.50 · Non-Latin orthography: 0.54 → 0.31
+1. **Capacity helps, monotonically** (0.52 → 0.43 → 0.32 across 7b/14b/27b).
+   This revises a phase-1 claim: 27b largely *cracked* Nguyen (1.00 → ~0.00),
+   so "unrecoverable from spelling" was premature — a capable model derives it.
 
-**But a hard core resists scale.** Some categories were flat across both models:
-- Transliteration where spelling doesn't determine sound — Nguyen: 1.00 → 1.00
-- Spanish: 0.61 → 0.61
+2. **Reasoning isn't free.** 27b is a reasoning model; its mandatory thinking
+   made batch evaluation operationally impractical (minutes/name, unbounded
+   output, KV-cache/SWA pressure). For a bounded, high-throughput lookup, the
+   non-reasoning 14b is the better *operational* choice despite ~0.11 higher CER.
+   Model selection = accuracy AND operational fit.
 
-Nguyen stuck at 1.0 regardless of model size shows its pronunciation is not
-recoverable from spelling ("win" from "Nguyen" is arbitrary/cultural). No LLM
-scaling fixes this class — it needs a lookup. This is the evidence-based case
-for a dictionary+LLM hybrid on non-derivable names.
+3. **The naive hybrid reduced accuracy (0.32 → 0.38).** CMUdict *has* entries for
+   transliterated names but they're anglicized/spelling-based, so presence-based
+   routing overrode the LLM's correct answers (Nguyen 0.00 → 1.33). It also
+   mismatched IPA conventions on easy names (control 0.05 → 0.13). It helped only
+   where the LLM was weak on common names (arabic 0.62→0.33, spanish, multisyllable).
+   Coverage-based routing is too aggressive; a confidence/convention-aware router
+   is required.
 
-**Confidence is miscalibrated.** Self-reported confidence sat at ~0.6–0.75
-almost regardless of correctness (Jennifer wrong-but-0.75 on 7b; Smith
-perfect-but-0.6). Unusable for triage as-is.
-
-**One designed behavior worked:** both models correctly declined the
-unpronounceable policy-breaker (X Æ A-12) with low confidence — the only
-abstention in either run.
+4. **Confidence remains miscalibrated** (~flat 0.6–0.75 regardless of correctness),
+   so it cannot yet gate a smarter hybrid. A rigorous reliability-diagram / ECE
+   analysis is the natural next step.
 
 ## Limitations
 
 - **Gold labels are unverified drafts** — absolute CER is soft. Relative
-  comparisons (14b > 7b) are robust; the exact 0.42 is not.
+  comparisons (27b > 14b > 7b) are robust; the exact 0.32 is not.
 - **Metric approximates.** Character-level CER on IPA is a proxy for true
   phoneme error rate; differing-but-valid IPA transcription conventions
   inflate it.
 - **Small set** (38 names) — directional, not statistically powered.
 - **Respelling not scored** (deferred to human accept/reject).
-- **Cost/latency not measured**; no dictionary baseline (so "does the LLM beat
-  a free lookup?" is unanswered by design).
 
-## Next steps (not in scope for phase 1)
-Verify gold set · calibrate confidence · dict+LLM hybrid for non-derivable
-names · measure latency/cost · deployment design (precompute IPA, store, serve).
+
 ## Status
-phase-1 complete
+Complete
